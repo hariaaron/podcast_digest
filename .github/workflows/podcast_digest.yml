@@ -1,3 +1,5 @@
+name: Daily Podcast Digest
+
 on:
   schedule:
     - cron: "0 5 * * *"  # 05:00 UTC (Zürich: 06:00/07:00 je nach Sommerzeit)
@@ -45,3 +47,10 @@ jobs:
       MAX_EPISODE_AGE_DAYS: "7"  # maximale Alter von Podcast Episoden in Tagen
       BOOTSTRAP: "0"  # auf "1" setzen, um den initialen Bootstrapping Prozess zu aktivieren
       BOOTSTRAP_LATEST_N: "10"  # Anzahl Artikel/Podcasts für initialen Bootstrapping Prozess
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
