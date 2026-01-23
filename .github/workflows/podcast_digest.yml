@@ -2,3 +2,12 @@ on:
   schedule:
     - cron: "0 5 * * *"  # 05:00 UTC (Zürich: 06:00/07:00 je nach Sommerzeit)
   workflow_dispatch:
+
+jobs:
+  run:
+    environment: "Podcast Digest"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # nötig, um state.json zurück zu committen
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
