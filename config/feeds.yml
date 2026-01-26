@@ -1,6 +1,6 @@
 # Add one RSS feed URL per line as a YAML list.
 # Example:
-- https://feeds.npr.org/510289/podcast.xml
+- https://fetchrss.com/feed/1vkMdCCc48As1vkMdl8rP5sQ.rss
 # - https://rss.example.com/podcast
 
 # Replace the example above with your podcast RSS URLs.
