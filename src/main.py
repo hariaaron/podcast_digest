@@ -54,6 +54,7 @@ def run(dry_run: bool = False):
 	print(f"Discovered {len(new_eps)} new episodes")
 
 	processed = []
+	processed_guids = []
 	for ep in new_eps:
 		guid = ep.get("guid")
 		# persist basic metadata
@@ -61,8 +62,8 @@ def run(dry_run: bool = False):
 
 		# SMOKE_TEST: skip heavy operations
 		if smoke_test:
-			processed_entry = storage.list_episodes().get(guid, {})
-			processed.append(processed_entry)
+			# record guid and fetch fresh state after any async updates
+			processed_guids.append(guid)
 			continue
 
 		transcript = None
@@ -90,8 +91,13 @@ def run(dry_run: bool = False):
 		processed_entry = storage.list_episodes().get(guid, {})
 		processed.append(processed_entry)
 
-	if processed:
-		generate_preview(processed)
+	if processed_guids:
+		# fetch latest stored entries so any summary_ai written by the LLM is included
+		latest = []
+		all_eps = storage.list_episodes()
+		for g in processed_guids:
+			latest.append(all_eps.get(g, {}))
+		generate_preview(latest)
 		print(f"Wrote preview to {PREVIEW_OUT}")
 
 	if dry_run:
