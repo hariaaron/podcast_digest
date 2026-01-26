@@ -35,9 +35,9 @@
 
 				<div class="summary">
 					{% if ep.summary_ai %}
-						{{ ep.summary_ai | nl2br }}
+						{{ ep.summary_ai | replace('\n', '<br/>') | safe }}
 					{% elif ep.summary %}
-						{{ ep.summary | nl2br }}
+						{{ ep.summary | replace('\n', '<br/>') | safe }}
 					{% else %}
 						<em>No summary available.</em>
 					{% endif %}
