@@ -78,10 +78,14 @@ def run(dry_run: bool = False):
 			if s:
 				summary = s.get("summary")
 		else:
-			# feed provided summary
+			# feed provided summary: attempt to generate an AI summary from it (unless smoke_test)
 			summary = ep.get("summary")
 			if summary:
 				storage.update_episode(guid, {"summary": summary})
+				if not smoke_test:
+					s = summarizer.summarize_text(guid, summary)
+					if s:
+						summary = s.get("summary")
 
 		processed_entry = storage.list_episodes().get(guid, {})
 		processed.append(processed_entry)

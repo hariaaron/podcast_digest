@@ -63,6 +63,33 @@ def summarize_transcript(guid: str, transcript: str) -> Optional[Dict[str, Any]]
 	return {"summary": content}
 
 
+def summarize_text(guid: str, text: str) -> Optional[Dict[str, Any]]:
+	"""Summarize arbitrary text (e.g., feed description) and store result in state.
+
+	This is used when no transcript is available but a description exists.
+	"""
+	if not text:
+		return None
+
+	prompt = (
+		"You are an assistant that creates concise podcast episode summaries.\n"
+		"Provide a short summary (2-4 sentences) and 3-5 bullet key takeaways.\n"
+		"Input text: \n" + text
+	)
+
+	model = DEFAULT_MODEL
+	try:
+		content = _call_openai(prompt, model=model)
+	except Exception:
+		return None
+
+	if not content:
+		return None
+
+	storage.update_episode(guid, {"summary_ai": content})
+	return {"summary": content}
+
+
 if __name__ == "__main__":
 	print("summarizer module. Use summarize_transcript(guid, transcript)")
 
