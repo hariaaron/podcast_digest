@@ -48,6 +48,13 @@
       "published": "2026-02-04T00:00:00+00:00",
       "feed": "Passwort - der Podcast von heise security - Spotify",
       "summary": "<img height=\"300\" src=\"https://i.scdn.co/image/ab67656300005f1fc26c6bfda9565982330b6dce\" width=\"300\" /><br /><br />Rundes Jubil&auml;um beim Podcast! Anl&auml;sslich der f&uuml;nfzigsten regul&auml;ren Folge besprechen Sylvester und Christopher viel H&ouml;rerfeedback, &uuml;ber das sie sich besonders freuen. Sie haben auch viele Themen f&uuml;r die Newsfolge mitgebracht - so viele, dass Sylvester nach zwei Stunden die Rei&szlig;leine zieht und eine Bonusfolge einl&auml;utet. Neben einer neuen RCE-L&uuml;cke in n8n gibt es eine Einsch&auml;tzung zu Bitlocker-Wiederherstellschl&uuml;sseln in der Cloud, ungl&auml;ubiges Kopfsch&uuml;tteln angesichts eines vibecoded PR-Stunts von Cloudflare, eine neue Bluetooth-L&uuml;cke und einen witzigen Weg, Anthropics LLMs aus dem Tritt zu bringen.<br /><br /><span style=\"font-size: 12px; color: gray;\">(Feed generated with <a href=\"https://fetchrss.com/feedLink?w=6977760cce6955b342092e82\" target=\"_blank\">FetchRSS</a>)</span>"
+    },
+    "2XHARma5lbBwleW48v7A4U": {
+      "title": "Jubiläums-Bonusfolge mit Zertifikatstransparenz, neuen Ransomware-Taktiken und telnet",
+      "link": "https://open.spotify.com/episode/2XHARma5lbBwleW48v7A4U",
+      "published": "2026-02-11T00:00:00+00:00",
+      "feed": "Passwort - der Podcast von heise security - Spotify",
+      "summary": "<img height=\"300\" src=\"https://i.scdn.co/image/ab67656300005f1fc26c6bfda9565982330b6dce\" width=\"300\" /><br /><br />In der Bonusfolge zum f&uuml;nfzigsten Jubil&auml;um geht es zun&auml;chst um Certificate Transparency. Die ist mittlerweile ein wichtiger Bestandteil der weltweiten PKI und jede &Auml;nderung kann unerwartete Folgen haben. Christopher erz&auml;hlt dann kurz, was Cyberkriminelle jetzt tun, um resilienter gegen Strafverfolger zu werden: Blockchain ist das Stichwort der Stunde f&uuml;r ALPHV und Co. Und Sylvester berichtet, wie KI-generierte Sicherheitsmeldungen das Ende der &quot;Bug-Bounty&quot;-Programme bei cURL und wom&ouml;glich anderen Opensource-Projekten einl&auml;uten. Um die einst&uuml;ndige Zusatzfolge abzurunden, gibt es auch noch eine Meinung zur neuen Sicherheitsl&uuml;cke in einem uralten Protokoll.<br /><br /><span style=\"font-size: 12px; color: gray;\">(Feed generated with <a href=\"https://fetchrss.com/feedLink?w=6977760cce6955b342092e82\" target=\"_blank\">FetchRSS</a>)</span>"
     }
   }
 }
